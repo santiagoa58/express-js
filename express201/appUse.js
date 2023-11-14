@@ -2,7 +2,7 @@ import express from "express";
 
 const app = express();
 
-function validateUser(req, res, next) {
+function validateUser(_req, res, next) {
   res.locals.validated = true;
   console.log("VALIDATED RAN!");
   next();
