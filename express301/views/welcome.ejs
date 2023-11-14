@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome to My Site</title>
+    <style>
+      body {
+        background-color: #f2f2f2;
+        font-family: Arial, sans-serif;
+      }
+      h1 {
+        color: #333;
+        font-size: 3rem;
+        text-align: center;
+        margin-top: 5rem;
+      }
+      p {
+        color: #666;
+        font-size: 1.5rem;
+        text-align: center;
+        margin-top: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Welcome <%= username %> to My Site</h1>
+    <p>Thank you for visiting our site. We hope you enjoy your stay!</p>
+    <form action="/logout" method="POST">
+      <button type="submit">Logout</button>
+    </form>
+  </body>
+</html>
