@@ -1,0 +1,187 @@
+/* Import Material Design fonts */
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
+
+/* Set font family and size */
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+/* Set primary and secondary colors */
+:root {
+  --primary-color: #2196f3;
+  --secondary-color: #ff4081;
+  --tertiary-color: #4caf50;
+  --quaternary-color: #9c27b0;
+  --quinary-color: #ff9800;
+}
+
+/* Add Material Design styles to buttons */
+button {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1976d2;
+}
+
+/* Add Material Design styles to input fields */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  border: none;
+  border-bottom: 2px solid #ccc;
+  font-size: 1rem;
+  padding: 8px;
+  transition: border-bottom 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-bottom: 2px solid var(--primary-color);
+  outline: none;
+}
+
+/* Add Material Design styles to headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  margin: 16px 0;
+}
+
+/* Add Material Design styles to links */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #1976d2;
+}
+
+header {
+  background-color: var(--tertiary-color);
+  color: #fff;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.header-image {
+  background-size: cover;
+  background-position: center;
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 0;
+}
+
+nav {
+  display: flex;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+li {
+  margin: 0 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  font-size: 24px;
+  transition: color 0.2s ease-in-out;
+}
+
+main {
+  padding: 50px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.read-more {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 24px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+footer {
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 20px;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+/* Add styles for 404 page */
+.error-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.error-page h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.error-page p {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.error-page a {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 24px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.error-page a:hover {
+  background-color: #ff0055;
+}
