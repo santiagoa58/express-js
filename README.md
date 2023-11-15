@@ -54,3 +54,21 @@ Express 301 holds a simple web application built using the Express framework in 
 To start the server, run: `node loginSite.js`.
 
 You can access the application at `http://localhost:3000`.
+
+## myNewExpressApp
+
+myNewExpressApp is a simple Express.js application generated using the express-generator.
+
+```bash
+npm install -g express-generator
+```
+
+### Installation
+
+1. Clone the repository: `git clone https://github.com/santiagoa58/express-js.git`
+2. Navigate to the project directory: `cd myNewExpressApp`
+3. Install dependencies: `npm install`
+
+### Usage
+
+To start the server, run: `npm start` or `nodemon`.
