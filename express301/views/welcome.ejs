@@ -41,15 +41,16 @@
         padding: 0;
       }
       a {
-        color: #fff;
+        color: #333;
         text-decoration: none;
         margin: 0 1rem;
       }
-      nav a {
-        white-space: nowrap;
-      }
       a:hover {
         color: #ccc;
+      }
+      nav a {
+        color: #fff;
+        white-space: nowrap;
       }
       nav h2 {
         margin: 0;
@@ -81,5 +82,6 @@
     </nav>
     <h1>Welcome <%= username %> to My Site</h1>
     <p>Thank you for visiting our site. We hope you enjoy your stay!</p>
+    <a href="/bank-statement" class="link-alt">Download Bank Statement</a>
   </body>
 </html>

@@ -60,6 +60,22 @@ app.get("/story/:id", (req, res) => {
   res.send(`<h1>Story ${req.params.id}</h1>`);
 });
 
+app.get("/bank-statement", (req, res) => {
+  res.download(
+    path.join(__dirname, "/user_statements/BankStatementChequing.png"),
+    "statement.png",
+    (err) => {
+      if (err) {
+        if (!res.headersSent) {
+          res.status(404).send("File not found");
+        } else {
+          console.log("file download error: ", err);
+        }
+      }
+    }
+  );
+});
+
 app.post("/process_login", (req, res, next) => {
   const password = req.body.password;
   const username = req.body.username;
