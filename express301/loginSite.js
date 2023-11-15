@@ -4,16 +4,13 @@ const helmet = require("helmet");
 const path = require("path");
 const cookieParser = require("cookie-parser");
 const app = express();
+
 app.use(helmet());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static("public"));
 app.use(cookieParser());
-
-// Set view engine and views directory
-app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "views"));
-
+// Middleware for login failure message
 app.use((req, res, next) => {
   if (req.query.msg === "failed") {
     res.locals.msg =
@@ -23,6 +20,17 @@ app.use((req, res, next) => {
   }
   next();
 });
+
+// Set view engine and views directory
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
+
+// Middleware for url params which is called when a param is used in a route
+app.param("id", (req, res, next, id) => {
+  console.log(`Params called: ${id}`);
+  next();
+});
+
 app.get("/login", (req, res) => {
   // not secured at all but just for demo purposes
   if (!!req.cookies.username) {
@@ -46,6 +54,10 @@ app.get("/welcome", (req, res) => {
       username: req.cookies.username,
     });
   }
+});
+
+app.get("/story/:id", (req, res) => {
+  res.send(`<h1>Story ${req.params.id}</h1>`);
 });
 
 app.post("/process_login", (req, res, next) => {

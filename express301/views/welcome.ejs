@@ -19,13 +19,67 @@
         text-align: center;
         margin-top: 2rem;
       }
+      nav {
+        background-color: #333;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        flex-wrap: wrap;
+      }
+      ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        flex-direction: row;
+        align-items: center;
+      }
+      li {
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 1rem;
+      }
+      nav a {
+        white-space: nowrap;
+      }
+      a:hover {
+        color: #ccc;
+      }
+      nav h2 {
+        margin: 0;
+      }
+      nav form {
+        margin: 0;
+      }
+      nav button {
+        background-color: #fff;
+        color: #333;
+        border: none;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        cursor: pointer;
+      }
     </style>
   </head>
   <body>
+    <nav>
+      <h2>My Site</h2>
+      <ul>
+        <li><a href="/story/1">Story 1</a></li>
+        <li><a href="/story/2">Story 2</a></li>
+        <li><a href="/story/3">Story 3</a></li>
+      </ul>
+      <form action="/logout" method="POST">
+        <button type="submit">Logout</button>
+      </form>
+    </nav>
     <h1>Welcome <%= username %> to My Site</h1>
     <p>Thank you for visiting our site. We hope you enjoy your stay!</p>
-    <form action="/logout" method="POST">
-      <button type="submit">Logout</button>
-    </form>
   </body>
 </html>
