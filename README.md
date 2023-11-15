@@ -61,6 +61,7 @@ myNewExpressApp is a simple Express.js application generated using the express-g
 
 ```bash
 npm install -g express-generator
+express myNewExpressApp
 ```
 
 ### Installation
